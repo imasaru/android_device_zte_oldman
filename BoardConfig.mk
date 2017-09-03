@@ -3,6 +3,7 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/zte/oldman/BoardConfigVendor.mk
 
+#Architecture
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm8909
@@ -13,8 +14,10 @@ TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
+# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := oldman
 
+#Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
